@@ -31,7 +31,7 @@ public interface EntityFireballExtra {
         d0 += random().nextGaussian() * 0.4D;
         d1 += random().nextGaussian() * 0.4D;
         d2 += random().nextGaussian() * 0.4D;
-        double d3 = (double) MathHelper.sqrt(d0 * d0 + d1 * d1 + d2 * d2);
+        double d3 = MathHelper.sqrt(d0 * d0 + d1 * d1 + d2 * d2);
 
         fireball.dirX = d0 / d3 * 0.1D;
         fireball.dirY = d1 / d3 * 0.1D;

@@ -16,10 +16,8 @@
 
 package io.github.fukkitmc.fukkit.extra;
 
-import io.github.fukkitmc.fukkit.mixins.accessor.TicketAccessor;
-import net.minecraft.server.*;
-
-import java.util.Iterator;
+import net.minecraft.server.ChunkCoordIntPair;
+import net.minecraft.server.TicketType;
 
 public interface ChunkMapDistanceExtra {
 
@@ -32,15 +30,6 @@ public interface ChunkMapDistanceExtra {
     }
 
     default <T> void removeAllTicketsFor(TicketType<T> ticketType, int ticketLevel, T ticketIdentifier) {
-        Ticket<T> target = TicketAccessor.create(ticketType, ticketLevel, ticketIdentifier);
-
-        for (Iterator<ArraySetSorted<Ticket<?>>> iterator = ((ChunkMapDistance) this).tickets.values().iterator(); iterator.hasNext(); ) {
-            ArraySetSorted<Ticket<?>> tickets = iterator.next();
-            tickets.remove(target);
-
-            if (tickets.isEmpty()) {
-                iterator.remove();
-            }
-        }
+        throw new UnsupportedOperationException();
     }
 }

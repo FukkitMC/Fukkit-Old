@@ -17,12 +17,13 @@
 package io.github.fukkitmc.fukkit.redirects;
 
 import net.minecraft.server.JsonList;
+import net.minecraft.server.JsonListEntry;
 
 import java.util.Collection;
 
 public class JsonListRedirects {
 
-    public static Collection getValues(JsonList list) {
+    public static <K, V extends JsonListEntry<K>> Collection<V> getValues(JsonList<K, V> list) {
         return list.d.values();
     }
 }

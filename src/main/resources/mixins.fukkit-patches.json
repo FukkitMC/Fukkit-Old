@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "io.github.fukkitmc.fukkit.mixins.patches",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "AdvancementMixin",
+    "AdvancementsMixin",
+    "ArgumentBlockMixin",
+    "AttributeRangedMixin",
+    "BlockChest$3Mixin",
+    "BlockMixin",
+    "PathfinderGoalRemoveBlockMixin",
+    "PathfinderGoalSitMixin",
+    "RayTraceMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

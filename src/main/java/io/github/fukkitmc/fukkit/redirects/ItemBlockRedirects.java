@@ -16,12 +16,28 @@
 
 package io.github.fukkitmc.fukkit.redirects;
 
-import net.minecraft.server.IBlockData;
-import net.minecraft.server.NBTTagCompound;
+import net.minecraft.server.*;
+
+import java.util.Iterator;
 
 public class ItemBlockRedirects {
 
-    public static IBlockData getBlockState(IBlockData iblockdata, NBTTagCompound nbttagcompound1) {
-        throw new UnsupportedOperationException();
+    public static IBlockData getBlockState(IBlockData state, NBTTagCompound nbt) {
+        BlockStateList<Block, IBlockData> blockstatelist = state.getBlock().getStates();
+
+        for (String s : nbt.getKeys()) {
+            IBlockState<?> iblockstate = blockstatelist.a(s);
+
+            if (iblockstate != null) {
+                String s1 = nbt.get(s).asString();
+                state = a(state, iblockstate, s1);
+            }
+        }
+
+        return state;
+    }
+
+    private static <T extends Comparable<T>> IBlockData a(IBlockData state, IBlockState<T> property, String value) {
+        return property.b(value).map(comparable -> state.set(property, comparable)).orElse(state);
     }
 }

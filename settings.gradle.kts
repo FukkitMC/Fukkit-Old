@@ -7,7 +7,7 @@ pluginManagement {
 
         maven {
             name = "FukkitMC"
-            url = uri("https://raw.githubusercontent.com/FukkitMC/fukkit-repo/master")
+            url = uri("../fukkit-repo")
         }
 
         maven {

@@ -23,7 +23,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(EntityCreeper.class)
-public class EntityCreeperMixin extends EntityMonster implements EntityCreeperExtra {
+public abstract class EntityCreeperMixin extends EntityMonster implements EntityCreeperExtra {
 
     @Shadow
     @Final
