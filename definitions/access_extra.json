@@ -1,0 +1,186 @@
+[
+  {
+    "name": "net/minecraft/server/TileEntity",
+    "publicizedFields": [
+      {
+        "name": "position",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      },
+      {
+        "name": "world",
+        "descriptor": "Lnet/minecraft/server/World;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityBeacon",
+    "publicizedFields": [
+      {
+        "name": "levels",
+        "descriptor": "I"
+      },
+      {
+        "name": "primaryEffect",
+        "descriptor": "Lnet/minecraft/server/MobEffectList;"
+      },
+      {
+        "name": "secondaryEffect",
+        "descriptor": "Lnet/minecraft/server/MobEffectList;"
+      },
+      {
+        "name": "customName",
+        "descriptor": "Lnet/minecraft/server/IChatBaseComponent;"
+      },
+      {
+        "name": "chestLock",
+        "descriptor": "Lnet/minecraft/server/ChestLock;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityStructure",
+    "publicizedFields": [
+      {
+        "name": "author",
+        "descriptor": "Ljava/lang/String;"
+      },
+      {
+        "name": "relativePosition",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      },
+      {
+        "name": "size",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      },
+      {
+        "name": "mirror",
+        "descriptor": "Lnet/minecraft/server/EnumBlockMirror;"
+      },
+      {
+        "name": "rotation",
+        "descriptor": "Lnet/minecraft/server/EnumBlockRotation;"
+      },
+      {
+        "name": "usageMode",
+        "descriptor": "Lnet/minecraft/server/BlockPropertyStructureMode;"
+      },
+      {
+        "name": "ignoreEntities",
+        "descriptor": "Z"
+      },
+      {
+        "name": "showAir",
+        "descriptor": "Z"
+      },
+      {
+        "name": "showBoundingBox",
+        "descriptor": "Z"
+      },
+      {
+        "name": "integrity",
+        "descriptor": "F"
+      },
+      {
+        "name": "seed",
+        "descriptor": "J"
+      },
+      {
+        "name": "metadata",
+        "descriptor": "Ljava/lang/String;"
+      },
+      {
+        "name": "author",
+        "descriptor": "Ljava/lang/String;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityFox",
+    "publicizedFields": [
+      {
+        "name": "by",
+        "descriptor": "Lnet/minecraft/server/DataWatcherObject;"
+      },
+      {
+        "name": "bz",
+        "descriptor": "Lnet/minecraft/server/DataWatcherObject;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "setFoxType",
+        "descriptor": "(Lnet/minecraft/server/EntityFox$Type;)V"
+      },
+      {
+        "name": "setSleeping",
+        "descriptor": "(Z)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/GameRules$GameRuleValue",
+    "publicizedMethods": [
+      {
+        "name": "setValue",
+        "descriptor": "(Ljava/lang/String;)V"
+      },
+      {
+        "name": "onChange",
+        "descriptor": "(Lnet/minecraft/server/MinecraftServer;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/GameRules$GameRuleBoolean",
+    "publicizedMethods": [
+      {
+        "name": "setValue",
+        "descriptor": "(Ljava/lang/String;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/GameRules$GameRuleInt",
+    "publicizedMethods": [
+      {
+        "name": "setValue",
+        "descriptor": "(Ljava/lang/String;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/MerchantRecipe",
+    "mutableFields": [
+      {
+        "name": "buyingItem1",
+        "descriptor": "Lnet/minecraft/server/ItemStack;"
+      },
+      {
+        "name": "buyingItem2",
+        "descriptor": "Lnet/minecraft/server/ItemStack;"
+      },
+      {
+        "name": "maxUses",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityLiving",
+    "mutableFields": [
+      {
+        "name": "maxNoDamageTicks",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityFishingHook",
+    "mutableFields": [
+      {
+        "name": "owner",
+        "descriptor": "Lnet/minecraft/server/EntityHuman;"
+      }
+    ]
+  }
+]

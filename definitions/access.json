@@ -1,0 +1,1899 @@
+[
+  {
+    "name": "net/minecraft/server/EntityPigZombie",
+    "publicizedFields": [
+      {
+        "name": "angerLevel",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Chunk",
+    "publicizedFields": [
+      {
+        "name": "tileEntities",
+        "descriptor": "Ljava/util/Map;"
+      },
+      {
+        "name": "world",
+        "descriptor": "Lnet/minecraft/server/World;"
+      },
+      {
+        "name": "heightMap",
+        "descriptor": "Ljava/util/Map;"
+      },
+      {
+        "name": "entitySlices",
+        "descriptor": "[Lnet/minecraft/server/EntitySlice;"
+      },
+      {
+        "name": "loaded",
+        "descriptor": "Z"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Ticket",
+    "publicizedFields": [
+      {
+        "name": "identifier",
+        "descriptor": "Ljava/lang/Object;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityCampfire",
+    "publicizedFields": [
+      {
+        "name": "cookingTimes",
+        "descriptor": "[I"
+      },
+      {
+        "name": "cookingTotalTimes",
+        "descriptor": "[I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntitySign",
+    "publicizedFields": [
+      {
+        "name": "isEditable",
+        "descriptor": "Z"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/DataConverterSpawnEgg",
+    "publicizedFields": [
+      {
+        "name": "ID_MAPPING",
+        "descriptor": "[Ljava/lang/String;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityProjectile",
+    "publicizedFields": [
+      {
+        "name": "shooterId",
+        "descriptor": "Ljava/util/UUID;"
+      },
+      {
+        "name": "shooter",
+        "descriptor": "Lnet/minecraft/server/EntityLiving;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/CraftingManager",
+    "publicizedFields": [
+      {
+        "name": "recipes",
+        "descriptor": "Ljava/util/Map;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityCreeper",
+    "publicizedFields": [
+      {
+        "name": "explosionRadius",
+        "descriptor": "I"
+      },
+      {
+        "name": "maxFuseTicks",
+        "descriptor": "I"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "explode",
+        "descriptor": "()V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityHuman",
+    "publicizedFields": [
+      {
+        "name": "sleepTicks",
+        "descriptor": "I"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "getMaxFireTicks",
+        "descriptor": "()I"
+      },
+      {
+        "name": "setShoulderEntityLeft",
+        "descriptor": "(Lnet/minecraft/server/NBTTagCompound;)V"
+      },
+      {
+        "name": "setShoulderEntityRight",
+        "descriptor": "(Lnet/minecraft/server/NBTTagCompound;)V"
+      },
+      {
+        "name": "closeInventory",
+        "descriptor": "()V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityBeehive",
+    "publicizedFields": [
+      {
+        "name": "flowerPos",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/InventoryCrafting",
+    "publicizedFields": [
+      {
+        "name": "container",
+        "descriptor": "Lnet/minecraft/server/Container;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntitySlime",
+    "publicizedMethods": [
+      {
+        "name": "setSize",
+        "descriptor": "(IZ)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PacketPlayInCustomPayload",
+    "publicizedFields": [
+      {
+        "name": "tag",
+        "descriptor": "Lnet/minecraft/server/MinecraftKey;"
+      },
+      {
+        "name": "data",
+        "descriptor": "Lnet/minecraft/server/PacketDataSerializer;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityShulker",
+    "publicizedFields": [
+      {
+        "name": "COLOR",
+        "descriptor": "Lnet/minecraft/server/DataWatcherObject;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ItemBucket",
+    "publicizedFields": [
+      {
+        "name": "fluidType",
+        "descriptor": "Lnet/minecraft/server/FluidType;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityAreaEffectCloud",
+    "publicizedFields": [
+      {
+        "name": "radiusOnUse",
+        "descriptor": "F"
+      },
+      {
+        "name": "effects",
+        "descriptor": "Ljava/util/List;"
+      },
+      {
+        "name": "durationOnUse",
+        "descriptor": "I"
+      },
+      {
+        "name": "radiusPerTick",
+        "descriptor": "F"
+      },
+      {
+        "name": "reapplicationDelay",
+        "descriptor": "I"
+      },
+      {
+        "name": "waitTime",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityHorseAbstract",
+    "publicizedFields": [
+      {
+        "name": "inventoryChest",
+        "descriptor": "Lnet/minecraft/server/InventorySubcontainer;"
+      },
+      {
+        "name": "attributeJumpStrength",
+        "descriptor": "Lnet/minecraft/server/IAttribute;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "loadChest",
+        "descriptor": "()V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityFurnace",
+    "publicizedFields": [
+      {
+        "name": "cookTimeTotal",
+        "descriptor": "I"
+      },
+      {
+        "name": "burnTime",
+        "descriptor": "I"
+      },
+      {
+        "name": "cookTime",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/BlockRedstoneWire",
+    "publicizedMethods": [
+      {
+        "name": "getPower",
+        "descriptor": "(ILnet/minecraft/server/IBlockData;)I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/BossBattle",
+    "publicizedFields": [
+      {
+        "name": "style",
+        "descriptor": "Lnet/minecraft/server/BossBattle$BarStyle;"
+      },
+      {
+        "name": "color",
+        "descriptor": "Lnet/minecraft/server/BossBattle$BarColor;"
+      },
+      {
+        "name": "title",
+        "descriptor": "Lnet/minecraft/server/IChatBaseComponent;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/RegionFileCache",
+    "publicizedFields": [
+      {
+        "name": "cache",
+        "descriptor": "Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/NetworkManager",
+    "publicizedFields": [
+      {
+        "name": "channel",
+        "descriptor": "Lio/netty/channel/Channel;"
+      },
+      {
+        "name": "socketAddress",
+        "descriptor": "Ljava/net/SocketAddress;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/AdvancementDataPlayer",
+    "publicizedFields": [
+      {
+        "name": "data",
+        "descriptor": "Ljava/util/Map;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityFallingBlock",
+    "publicizedFields": [
+      {
+        "name": "hurtEntities",
+        "descriptor": "Z"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityLectern",
+    "publicizedFields": [
+      {
+        "name": "inventory",
+        "descriptor": "Lnet/minecraft/server/IInventory;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "setPage",
+        "descriptor": "(I)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Explosion",
+    "publicizedFields": [
+      {
+        "name": "source",
+        "descriptor": "Lnet/minecraft/server/Entity;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityFish",
+    "publicizedMethods": [
+      {
+        "name": "isFromBucket",
+        "descriptor": "()Z"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityHanging",
+    "publicizedFields": [
+      {
+        "name": "blockPosition",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "setDirection",
+        "descriptor": "(Lnet/minecraft/server/EnumDirection;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ItemStack",
+    "publicizedFields": [
+      {
+        "name": "item",
+        "descriptor": "Lnet/minecraft/server/Item;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ContainerDispenser",
+    "publicizedFields": [
+      {
+        "name": "items",
+        "descriptor": "Lnet/minecraft/server/IInventory;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/BlockShulkerBox",
+    "publicizedFields": [
+      {
+        "name": "color",
+        "descriptor": "Lnet/minecraft/server/EnumColor;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityZombie",
+    "publicizedFields": [
+      {
+        "name": "DROWN_CONVERTING",
+        "descriptor": "Lnet/minecraft/server/DataWatcherObject;"
+      },
+      {
+        "name": "drownedConversionTime",
+        "descriptor": "I"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "startDrownedConversion",
+        "descriptor": "(I)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PersistentRaid",
+    "publicizedFields": [
+      {
+        "name": "raids",
+        "descriptor": "Ljava/util/Map;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PacketPlayInSettings",
+    "publicizedFields": [
+      {
+        "name": "viewDistance",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntitySkull",
+    "publicizedFields": [
+      {
+        "name": "gameProfile",
+        "descriptor": "Lcom/mojang/authlib/GameProfile;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityFireworks",
+    "publicizedFields": [
+      {
+        "name": "expectedLifespan",
+        "descriptor": "I"
+      },
+      {
+        "name": "SHOT_AT_ANGLE",
+        "descriptor": "Lnet/minecraft/server/DataWatcherObject;"
+      },
+      {
+        "name": "FIREWORK_ITEM",
+        "descriptor": "Lnet/minecraft/server/DataWatcherObject;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/WorldServer",
+    "publicizedFields": [
+      {
+        "name": "entitiesById",
+        "descriptor": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PlayerList",
+    "publicizedFields": [
+      {
+        "name": "playerFileData",
+        "descriptor": "Lnet/minecraft/server/IPlayerFileData;"
+      },
+      {
+        "name": "players",
+        "descriptor": "Ljava/util/List;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "sendScoreboard",
+        "descriptor": "(Lnet/minecraft/server/ScoreboardServer;Lnet/minecraft/server/EntityPlayer;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Container",
+    "publicizedFields": [
+      {
+        "name": "items",
+        "descriptor": "Lnet/minecraft/server/NonNullList;"
+      },
+      {
+        "name": "slots",
+        "descriptor": "Ljava/util/List;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityLiving",
+    "publicizedFields": [
+      {
+        "name": "effects",
+        "descriptor": "Ljava/util/Map;"
+      },
+      {
+        "name": "killer",
+        "descriptor": "Lnet/minecraft/server/EntityHuman;"
+      },
+      {
+        "name": "lastDamage",
+        "descriptor": "F"
+      },
+      {
+        "name": "hurtTimestamp",
+        "descriptor": "I"
+      },
+      {
+        "name": "updateEffects",
+        "descriptor": "Z"
+      },
+      {
+        "name": "combatTracker",
+        "descriptor": "Lnet/minecraft/server/CombatTracker;"
+      },
+      {
+        "name": "lastDamager",
+        "descriptor": "Lnet/minecraft/server/EntityLiving;"
+      },
+      {
+        "name": "HEALTH",
+        "descriptor": "Lnet/minecraft/server/DataWatcherObject;"
+      },
+      {
+        "name": "maxNoDamageTicks",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Raid",
+    "publicizedFields": [
+      {
+        "name": "heroes",
+        "descriptor": "Ljava/util/Set;"
+      },
+      {
+        "name": "ticksActive",
+        "descriptor": "J"
+      },
+      {
+        "name": "numGroups",
+        "descriptor": "I"
+      },
+      {
+        "name": "totalHealth",
+        "descriptor": "F"
+      },
+      {
+        "name": "badOmenLevel",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityEndGateway",
+    "publicizedFields": [
+      {
+        "name": "exitPortal",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      },
+      {
+        "name": "age",
+        "descriptor": "J"
+      },
+      {
+        "name": "exactTeleport",
+        "descriptor": "Z"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/BossBattleServer",
+    "publicizedFields": [
+      {
+        "name": "visible",
+        "descriptor": "Z"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "sendUpdate",
+        "descriptor": "(Lnet/minecraft/server/PacketPlayOutBoss$Action;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ChestLock",
+    "publicizedFields": [
+      {
+        "name": "key",
+        "descriptor": "Ljava/lang/String;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityWither",
+    "publicizedFields": [
+      {
+        "name": "bossBattle",
+        "descriptor": "Lnet/minecraft/server/BossBattleServer;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/DataConverterMaterialId",
+    "publicizedFields": [
+      {
+        "name": "ID_MAPPING",
+        "descriptor": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/AdvancementDataWorld",
+    "publicizedFields": [
+      {
+        "name": "REGISTRY",
+        "descriptor": "Lnet/minecraft/server/Advancements;"
+      },
+      {
+        "name": "DESERIALIZER",
+        "descriptor": "Lcom/google/gson/Gson;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/GameRules$GameRuleValue",
+    "publicizedMethods": [
+      {
+        "name": "onChange",
+        "descriptor": "(Lnet/minecraft/server/MinecraftServer;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityArmorStand",
+    "publicizedFields": [
+      {
+        "name": "rightArmPose",
+        "descriptor": "Lnet/minecraft/server/Vector3f;"
+      },
+      {
+        "name": "leftLegPose",
+        "descriptor": "Lnet/minecraft/server/Vector3f;"
+      },
+      {
+        "name": "leftArmPose",
+        "descriptor": "Lnet/minecraft/server/Vector3f;"
+      },
+      {
+        "name": "headPose",
+        "descriptor": "Lnet/minecraft/server/Vector3f;"
+      },
+      {
+        "name": "rightLegPose",
+        "descriptor": "Lnet/minecraft/server/Vector3f;"
+      },
+      {
+        "name": "bodyPose",
+        "descriptor": "Lnet/minecraft/server/Vector3f;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "setBasePlate",
+        "descriptor": "(Z)V"
+      },
+      {
+        "name": "setSmall",
+        "descriptor": "(Z)V"
+      },
+      {
+        "name": "setMarker",
+        "descriptor": "(Z)V"
+      },
+      {
+        "name": "setArms",
+        "descriptor": "(Z)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/InventorySubcontainer",
+    "publicizedFields": [
+      {
+        "name": "items",
+        "descriptor": "Lnet/minecraft/server/NonNullList;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ItemBlockWallable",
+    "publicizedFields": [
+      {
+        "name": "wallBlock",
+        "descriptor": "Lnet/minecraft/server/Block;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PacketPlayOutBlockChange",
+    "publicizedFields": [
+      {
+        "name": "block",
+        "descriptor": "Lnet/minecraft/server/IBlockData;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/InventoryLargeChest",
+    "publicizedFields": [
+      {
+        "name": "right",
+        "descriptor": "Lnet/minecraft/server/IInventory;"
+      },
+      {
+        "name": "left",
+        "descriptor": "Lnet/minecraft/server/IInventory;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityLlama",
+    "publicizedMethods": [
+      {
+        "name": "setStrength",
+        "descriptor": "(I)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/DedicatedServer",
+    "publicizedFields": [
+      {
+        "name": "remoteControlCommandListener",
+        "descriptor": "Lnet/minecraft/server/RemoteControlCommandListener;"
+      },
+      {
+        "name": "propertyManager",
+        "descriptor": "Lnet/minecraft/server/DedicatedServerSettings;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntitySpectralArrow",
+    "publicizedFields": [
+      {
+        "name": "duration",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/WorldPersistentData",
+    "publicizedFields": [
+      {
+        "name": "data",
+        "descriptor": "Ljava/util/Map;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ChunkMapDistance",
+    "publicizedFields": [
+      {
+        "name": "tickets",
+        "descriptor": "Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ItemCooldown",
+    "publicizedFields": [
+      {
+        "name": "currentTick",
+        "descriptor": "I"
+      },
+      {
+        "name": "cooldowns",
+        "descriptor": "Ljava/util/Map;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityContainer",
+    "publicizedFields": [
+      {
+        "name": "customName",
+        "descriptor": "Lnet/minecraft/server/IChatBaseComponent;"
+      },
+      {
+        "name": "chestLock",
+        "descriptor": "Lnet/minecraft/server/ChestLock;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityZombieVillager",
+    "publicizedFields": [
+      {
+        "name": "conversionPlayer",
+        "descriptor": "Ljava/util/UUID;"
+      },
+      {
+        "name": "CONVERTING",
+        "descriptor": "Lnet/minecraft/server/DataWatcherObject;"
+      },
+      {
+        "name": "conversionTime",
+        "descriptor": "I"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "startConversion",
+        "descriptor": "(Ljava/util/UUID;I)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityThrownTrident",
+    "publicizedFields": [
+      {
+        "name": "trident",
+        "descriptor": "Lnet/minecraft/server/ItemStack;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/MerchantRecipe",
+    "publicizedFields": [
+      {
+        "name": "rewardExp",
+        "descriptor": "Z"
+      },
+      {
+        "name": "sellingItem",
+        "descriptor": "Lnet/minecraft/server/ItemStack;"
+      },
+      {
+        "name": "xp",
+        "descriptor": "I"
+      },
+      {
+        "name": "priceMultiplier",
+        "descriptor": "F"
+      },
+      {
+        "name": "maxUses",
+        "descriptor": "I"
+      },
+      {
+        "name": "buyingItem2",
+        "descriptor": "Lnet/minecraft/server/ItemStack;"
+      },
+      {
+        "name": "uses",
+        "descriptor": "I"
+      },
+      {
+        "name": "buyingItem1",
+        "descriptor": "Lnet/minecraft/server/ItemStack;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityTippedArrow",
+    "publicizedFields": [
+      {
+        "name": "effects",
+        "descriptor": "Ljava/util/Set;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "setColor",
+        "descriptor": "(I)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ScoreboardObjective",
+    "publicizedFields": [
+      {
+        "name": "displayName",
+        "descriptor": "Lnet/minecraft/server/IChatBaseComponent;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityFishingHook",
+    "publicizedFields": [
+      {
+        "name": "owner",
+        "descriptor": "Lnet/minecraft/server/EntityHuman;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Advancements",
+    "publicizedFields": [
+      {
+        "name": "advancements",
+        "descriptor": "Ljava/util/Map;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/JsonListEntry",
+    "publicizedMethods": [
+      {
+        "name": "getKey",
+        "descriptor": "()Ljava/lang/Object;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/MobSpawnerAbstract",
+    "publicizedFields": [
+      {
+        "name": "spawnRange",
+        "descriptor": "I"
+      },
+      {
+        "name": "mobs",
+        "descriptor": "Ljava/util/List;"
+      },
+      {
+        "name": "spawnDelay",
+        "descriptor": "I"
+      },
+      {
+        "name": "maxNearbyEntities",
+        "descriptor": "I"
+      },
+      {
+        "name": "maxSpawnDelay",
+        "descriptor": "I"
+      },
+      {
+        "name": "minSpawnDelay",
+        "descriptor": "I"
+      },
+      {
+        "name": "spawnData",
+        "descriptor": "Lnet/minecraft/server/MobSpawnerData;"
+      },
+      {
+        "name": "spawnCount",
+        "descriptor": "I"
+      },
+      {
+        "name": "requiredPlayerRange",
+        "descriptor": "I"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "getMobName",
+        "descriptor": "()Lnet/minecraft/server/MinecraftKey;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityBanner",
+    "publicizedFields": [
+      {
+        "name": "color",
+        "descriptor": "Lnet/minecraft/server/EnumColor;"
+      },
+      {
+        "name": "patterns",
+        "descriptor": "Lnet/minecraft/server/NBTTagList;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PacketPlayInResourcePackStatus",
+    "publicizedFields": [
+      {
+        "name": "status",
+        "descriptor": "Lnet/minecraft/server/PacketPlayInResourcePackStatus$EnumResourcePackStatus;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityPillager",
+    "publicizedFields": [
+      {
+        "name": "inventory",
+        "descriptor": "Lnet/minecraft/server/InventorySubcontainer;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityFox",
+    "publicizedMethods": [
+      {
+        "name": "setSleeping",
+        "descriptor": "(Z)V"
+      },
+      {
+        "name": "setFoxType",
+        "descriptor": "(Lnet/minecraft/server/EntityFox$Type;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityPotion",
+    "publicizedMethods": [
+      {
+        "name": "isLingering",
+        "descriptor": "()Z"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityExperienceOrb",
+    "publicizedFields": [
+      {
+        "name": "value",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/BlockDataAbstract",
+    "publicizedFields": [
+      {
+        "name": "STATE_TO_VALUE",
+        "descriptor": "Ljava/util/function/Function;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ChunkSection",
+    "publicizedFields": [
+      {
+        "name": "GLOBAL_PALETTE",
+        "descriptor": "Lnet/minecraft/server/DataPalette;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityLootable",
+    "publicizedFields": [
+      {
+        "name": "lootTable",
+        "descriptor": "Lnet/minecraft/server/MinecraftKey;"
+      },
+      {
+        "name": "lootTableSeed",
+        "descriptor": "J"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityEnderSignal",
+    "publicizedFields": [
+      {
+        "name": "shouldDropItem",
+        "descriptor": "Z"
+      },
+      {
+        "name": "targetZ",
+        "descriptor": "D"
+      },
+      {
+        "name": "despawnTimer",
+        "descriptor": "I"
+      },
+      {
+        "name": "targetX",
+        "descriptor": "D"
+      },
+      {
+        "name": "targetY",
+        "descriptor": "D"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PlayerChunkMap$EntityTracker",
+    "publicizedFields": [
+      {
+        "name": "trackedPlayers",
+        "descriptor": "Ljava/util/Set;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ContainerAnvil",
+    "publicizedFields": [
+      {
+        "name": "renameText",
+        "descriptor": "Ljava/lang/String;"
+      },
+      {
+        "name": "levelCost",
+        "descriptor": "Lnet/minecraft/server/ContainerProperty;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/FoodMetaData",
+    "publicizedFields": [
+      {
+        "name": "saturationLevel",
+        "descriptor": "F"
+      },
+      {
+        "name": "exhaustionLevel",
+        "descriptor": "F"
+      },
+      {
+        "name": "foodLevel",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityBed",
+    "publicizedFields": [
+      {
+        "name": "color",
+        "descriptor": "Lnet/minecraft/server/EnumColor;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityMagmaCube",
+    "publicizedMethods": [
+      {
+        "name": "setSize",
+        "descriptor": "(IZ)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityMinecartCommandBlock",
+    "publicizedFields": [
+      {
+        "name": "COMMAND",
+        "descriptor": "Lnet/minecraft/server/DataWatcherObject;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/WorldMap",
+    "publicizedFields": [
+      {
+        "name": "humans",
+        "descriptor": "Ljava/util/Map;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PlayerAbilities",
+    "publicizedFields": [
+      {
+        "name": "flySpeed",
+        "descriptor": "F"
+      },
+      {
+        "name": "walkSpeed",
+        "descriptor": "F"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PlayerChunkMap",
+    "publicizedFields": [
+      {
+        "name": "worldLoadListener",
+        "descriptor": "Lnet/minecraft/server/WorldLoadListener;"
+      },
+      {
+        "name": "world",
+        "descriptor": "Lnet/minecraft/server/WorldServer;"
+      },
+      {
+        "name": "trackedEntities",
+        "descriptor": "Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;"
+      },
+      {
+        "name": "visibleChunks",
+        "descriptor": "Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;"
+      },
+      {
+        "name": "chunkDistanceManager",
+        "descriptor": "Lnet/minecraft/class_3898$class_3216;"
+      },
+      {
+        "name": "updatingChunks",
+        "descriptor": "Lit/unimi/dsi/fastutil/longs/Long2ObjectLinkedOpenHashMap;"
+      },
+      {
+        "name": "chunkGenerator",
+        "descriptor": "Lnet/minecraft/server/ChunkGenerator;"
+      },
+      {
+        "name": "unloadQueue",
+        "descriptor": "Lit/unimi/dsi/fastutil/longs/LongSet;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "saveChunk",
+        "descriptor": "(Lnet/minecraft/server/IChunkAccess;)Z"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityAnimal",
+    "publicizedFields": [
+      {
+        "name": "breedCause",
+        "descriptor": "Ljava/util/UUID;"
+      },
+      {
+        "name": "loveTicks",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/CommandListenerWrapper",
+    "publicizedFields": [
+      {
+        "name": "base",
+        "descriptor": "Lnet/minecraft/server/ICommandListener;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityItem",
+    "publicizedFields": [
+      {
+        "name": "pickupDelay",
+        "descriptor": "I"
+      },
+      {
+        "name": "age",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityArrow",
+    "publicizedFields": [
+      {
+        "name": "despawnCounter",
+        "descriptor": "I"
+      },
+      {
+        "name": "inGround",
+        "descriptor": "Z"
+      },
+      {
+        "name": "knockbackStrength",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/InventoryMerchant",
+    "publicizedFields": [
+      {
+        "name": "selectedIndex",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/MinecraftServer",
+    "publicizedFields": [
+      {
+        "name": "universe",
+        "descriptor": "Ljava/io/File;"
+      },
+      {
+        "name": "serverThread",
+        "descriptor": "Ljava/lang/Thread;"
+      },
+      {
+        "name": "commandDispatcher",
+        "descriptor": "Lnet/minecraft/server/CommandDispatcher;"
+      },
+      {
+        "name": "executorService",
+        "descriptor": "Ljava/util/concurrent/Executor;"
+      },
+      {
+        "name": "convertable",
+        "descriptor": "Lnet/minecraft/server/Convertable;"
+      },
+      {
+        "name": "worldServer",
+        "descriptor": "Ljava/util/Map;"
+      },
+      {
+        "name": "dataConverterManager",
+        "descriptor": "Lcom/mojang/datafixers/DataFixer;"
+      },
+      {
+        "name": "worldLoadListenerFactory",
+        "descriptor": "Lnet/minecraft/server/WorldLoadListenerFactory;"
+      },
+      {
+        "name": "serverConnection",
+        "descriptor": "Lnet/minecraft/server/ServerConnection;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "convertWorld",
+        "descriptor": "(Ljava/lang/String;)V"
+      },
+      {
+        "name": "loadSpawn",
+        "descriptor": "(Lnet/minecraft/server/WorldLoadListener;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/AttributeRanged",
+    "publicizedFields": [
+      {
+        "name": "maximum",
+        "descriptor": "D"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityPlayer",
+    "publicizedFields": [
+      {
+        "name": "removeQueue",
+        "descriptor": "Ljava/util/List;"
+      },
+      {
+        "name": "lastSentExp",
+        "descriptor": "I"
+      },
+      {
+        "name": "locale",
+        "descriptor": "Ljava/lang/String;"
+      },
+      {
+        "name": "worldChangeInvuln",
+        "descriptor": "Z"
+      },
+      {
+        "name": "invulnerableTicks",
+        "descriptor": "I"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "triggerDimensionAdvancements",
+        "descriptor": "(Lnet/minecraft/server/WorldServer;)V"
+      },
+      {
+        "name": "nextContainerCounter",
+        "descriptor": "()V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityGuardianElder",
+    "publicizedMethods": [
+      {
+        "name": "initAttributes",
+        "descriptor": "()V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ChunkProviderServer",
+    "publicizedFields": [
+      {
+        "name": "allowMonsters",
+        "descriptor": "Z"
+      },
+      {
+        "name": "allowAnimals",
+        "descriptor": "Z"
+      },
+      {
+        "name": "chunkGenerator",
+        "descriptor": "Lnet/minecraft/server/ChunkGenerator;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/BlockDispenser",
+    "publicizedFields": [
+      {
+        "name": "REGISTRY",
+        "descriptor": "Ljava/util/Map;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "dispense",
+        "descriptor": "(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TicketType",
+    "publicizedFields": [
+      {
+        "name": "loadPeriod",
+        "descriptor": "J"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PlayerChunk",
+    "publicizedFields": [
+      {
+        "name": "oldTicketLevel",
+        "descriptor": "I"
+      },
+      {
+        "name": "players",
+        "descriptor": "Lnet/minecraft/class_3193$class_3897;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/DataConverterFlattenData",
+    "publicizedMethods": [
+      {
+        "name": "map",
+        "descriptor": "(ILjava/lang/String;[Ljava/lang/String;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/DimensionManager",
+    "publicizedFields": [
+      {
+        "name": "providerFactory",
+        "descriptor": "Ljava/util/function/BiFunction;"
+      },
+      {
+        "name": "folder",
+        "descriptor": "Ljava/lang/String;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "\u003cinit\u003e",
+        "descriptor": "(ILjava/lang/String;Ljava/lang/String;Ljava/util/function/BiFunction;ZLnet/minecraft/server/GenLayerZoomer;)V"
+      },
+      {
+        "name": "register",
+        "descriptor": "(Ljava/lang/String;Lnet/minecraft/server/DimensionManager;)Lnet/minecraft/server/DimensionManager;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityItemFrame",
+    "publicizedMethods": [
+      {
+        "name": "setDirection",
+        "descriptor": "(Lnet/minecraft/server/EnumDirection;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityMinecartContainer",
+    "publicizedFields": [
+      {
+        "name": "lootTable",
+        "descriptor": "Lnet/minecraft/server/MinecraftKey;"
+      },
+      {
+        "name": "lootTableSeed",
+        "descriptor": "J"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/BlockDropper",
+    "publicizedMethods": [
+      {
+        "name": "dispense",
+        "descriptor": "(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityMushroomCow",
+    "publicizedMethods": [
+      {
+        "name": "setVariant",
+        "descriptor": "(Lnet/minecraft/server/EntityMushroomCow$Type;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/BlockJukeBox",
+    "publicizedMethods": [
+      {
+        "name": "dropRecord",
+        "descriptor": "(Lnet/minecraft/server/World;Lnet/minecraft/server/BlockPosition;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Block",
+    "publicizedFields": [
+      {
+        "name": "strength",
+        "descriptor": "F"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityBrewingStand",
+    "publicizedFields": [
+      {
+        "name": "fuelLevel",
+        "descriptor": "I"
+      },
+      {
+        "name": "brewTime",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EnumChatFormat",
+    "publicizedFields": [
+      {
+        "name": "character",
+        "descriptor": "C"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EnderDragonBattle",
+    "publicizedFields": [
+      {
+        "name": "bossBattle",
+        "descriptor": "Lnet/minecraft/server/BossBattleServer;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/RecipeItemStack",
+    "publicizedFields": [
+      {
+        "name": "choices",
+        "descriptor": "[Lnet/minecraft/server/ItemStack;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "\u003cinit\u003e",
+        "descriptor": "(Ljava/util/stream/Stream;)V"
+      },
+      {
+        "name": "buildChoices",
+        "descriptor": "()V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityBeacon",
+    "publicizedFields": [
+      {
+        "name": "chestLock",
+        "descriptor": "Lnet/minecraft/server/ChestLock;"
+      },
+      {
+        "name": "secondaryEffect",
+        "descriptor": "Lnet/minecraft/server/MobEffectList;"
+      },
+      {
+        "name": "primaryEffect",
+        "descriptor": "Lnet/minecraft/server/MobEffectList;"
+      },
+      {
+        "name": "levels",
+        "descriptor": "I"
+      },
+      {
+        "name": "customName",
+        "descriptor": "Lnet/minecraft/server/IChatBaseComponent;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityGuardian",
+    "publicizedFields": [
+      {
+        "name": "goalRandomStroll",
+        "descriptor": "Lnet/minecraft/server/PathfinderGoalRandomStroll;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "initAttributes",
+        "descriptor": "()V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityVillager",
+    "publicizedMethods": [
+      {
+        "name": "populateTrades",
+        "descriptor": "()V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ContainerWorkbench",
+    "publicizedFields": [
+      {
+        "name": "containerAccess",
+        "descriptor": "Lnet/minecraft/server/ContainerAccess;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/TileEntityStructure",
+    "publicizedFields": [
+      {
+        "name": "size",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      },
+      {
+        "name": "metadata",
+        "descriptor": "Ljava/lang/String;"
+      },
+      {
+        "name": "integrity",
+        "descriptor": "F"
+      },
+      {
+        "name": "rotation",
+        "descriptor": "Lnet/minecraft/server/EnumBlockRotation;"
+      },
+      {
+        "name": "mirror",
+        "descriptor": "Lnet/minecraft/server/EnumBlockMirror;"
+      },
+      {
+        "name": "seed",
+        "descriptor": "J"
+      },
+      {
+        "name": "author",
+        "descriptor": "Ljava/lang/String;"
+      },
+      {
+        "name": "showAir",
+        "descriptor": "Z"
+      },
+      {
+        "name": "ignoreEntities",
+        "descriptor": "Z"
+      },
+      {
+        "name": "relativePosition",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      },
+      {
+        "name": "showBoundingBox",
+        "descriptor": "Z"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityInsentient",
+    "publicizedFields": [
+      {
+        "name": "targetSelector",
+        "descriptor": "Lnet/minecraft/server/PathfinderGoalSelector;"
+      },
+      {
+        "name": "persistent",
+        "descriptor": "Z"
+      },
+      {
+        "name": "dropChanceArmor",
+        "descriptor": "[F"
+      },
+      {
+        "name": "lootTableKey",
+        "descriptor": "Lnet/minecraft/server/MinecraftKey;"
+      },
+      {
+        "name": "dropChanceHand",
+        "descriptor": "[F"
+      },
+      {
+        "name": "goalSelector",
+        "descriptor": "Lnet/minecraft/server/PathfinderGoalSelector;"
+      },
+      {
+        "name": "lootTableSeed",
+        "descriptor": "J"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/MojangsonParser",
+    "publicizedMethods": [
+      {
+        "name": "parseArray",
+        "descriptor": "()Lnet/minecraft/server/NBTBase;"
+      },
+      {
+        "name": "parseLiteral",
+        "descriptor": "(Ljava/lang/String;)Lnet/minecraft/server/NBTBase;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityIllagerWizard",
+    "publicizedMethods": [
+      {
+        "name": "getSpell",
+        "descriptor": "()Lnet/minecraft/server/EntityIllagerWizard$Spell;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PacketPlayOutSpawnPosition",
+    "publicizedFields": [
+      {
+        "name": "position",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityBee",
+    "publicizedFields": [
+      {
+        "name": "hivePos",
+        "descriptor": "Lnet/minecraft/server/BlockPosition;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "getAnger",
+        "descriptor": "()I"
+      },
+      {
+        "name": "setHasStung",
+        "descriptor": "(Z)V"
+      },
+      {
+        "name": "setAnger",
+        "descriptor": "(I)V"
+      },
+      {
+        "name": "setHasNectar",
+        "descriptor": "(Z)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Entity",
+    "publicizedFields": [
+      {
+        "name": "fireTicks",
+        "descriptor": "I"
+      },
+      {
+        "name": "inWater",
+        "descriptor": "Z"
+      },
+      {
+        "name": "glowing",
+        "descriptor": "Z"
+      },
+      {
+        "name": "passengers",
+        "descriptor": "Ljava/util/List;"
+      }
+    ],
+    "publicizedMethods": [
+      {
+        "name": "setFlag",
+        "descriptor": "(IZ)V"
+      },
+      {
+        "name": "getMaxFireTicks",
+        "descriptor": "()I"
+      },
+      {
+        "name": "getSaveID",
+        "descriptor": "()Ljava/lang/String;"
+      },
+      {
+        "name": "getFlag",
+        "descriptor": "(I)Z"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PacketPlayOutPlayerListHeaderFooter",
+    "publicizedFields": [
+      {
+        "name": "header",
+        "descriptor": "Lnet/minecraft/server/IChatBaseComponent;"
+      },
+      {
+        "name": "footer",
+        "descriptor": "Lnet/minecraft/server/IChatBaseComponent;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PacketHandshakingInSetProtocol",
+    "publicizedFields": [
+      {
+        "name": "hostname",
+        "descriptor": "Ljava/lang/String;"
+      },
+      {
+        "name": "port",
+        "descriptor": "I"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PropertyManager",
+    "publicizedFields": [
+      {
+        "name": "properties",
+        "descriptor": "Ljava/util/Properties;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/World",
+    "publicizedFields": [
+      {
+        "name": "worldData",
+        "descriptor": "Lnet/minecraft/server/WorldData;"
+      },
+      {
+        "name": "worldProvider",
+        "descriptor": "Lnet/minecraft/server/WorldProvider;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityEnderDragon",
+    "publicizedFields": [
+      {
+        "name": "children",
+        "descriptor": "[Lnet/minecraft/server/EntityComplexPart;"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Slot",
+    "publicizedFields": [
+      {
+        "name": "index",
+        "descriptor": "I"
+      }
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+.gradle/
+build/
+patches/
+src/main/java/org

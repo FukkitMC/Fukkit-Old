@@ -1,0 +1,34 @@
+[
+  {
+    "name": "net/minecraft/server/BaseBlockPosition",
+    "syntheticMethods": [
+      {
+        "access": 1,
+        "opcode": 182,
+        "name": "compareTo",
+        "descriptor": "(Lnet/minecraft/server/BaseBlockPosition;)I",
+        "redirect": {
+          "owner": "net/minecraft/server/BaseBlockPosition",
+          "name": "l",
+          "descriptor": "(Lnet/minecraft/server/BaseBlockPosition;)I"
+        }
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/IChunkAccess",
+    "syntheticMethods": [
+      {
+        "opcode": 182,
+        "name": "getSections",
+        "descriptor": "()[Lnet/minecraft/server/ChunkSection;",
+        "access": 1,
+        "redirect": {
+          "owner": "net/minecraft/server/IChunkAccess",
+          "name": "d",
+          "descriptor": "()[Lnet/minecraft/server/ChunkSection;"
+        }
+      }
+    ]
+  }
+]

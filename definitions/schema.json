@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "name"
+    ],
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "injectInterfaces": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "uniqueItems": true,
+        "default": []
+      },
+      "publicizedFields": {
+        "$ref": "#/items/definitions/memberSet"
+      },
+      "publicizedMethods": {
+        "$ref": "#/items/definitions/memberSet"
+      },
+      "mutableFields": {
+        "$ref": "#/items/definitions/memberSet"
+      },
+      "syntheticFields": {
+        "type": "array",
+        "uniqueItems": true,
+        "default": [],
+        "items": {
+          "type": "object",
+          "required": [
+            "access",
+            "name",
+            "type"
+          ],
+          "properties": {
+            "access": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "signature": {
+              "type": "string"
+            },
+            "getter": {
+              "$ref": "#/items/definitions/accessor"
+            },
+            "setter": {
+              "$ref": "#/items/definitions/accessor"
+            }
+          }
+        }
+      },
+      "syntheticMethods": {
+        "type": "array",
+        "uniqueItems": true,
+        "default": [],
+        "items": {
+          "type": "object",
+          "required": [
+            "opcode",
+            "access",
+            "name",
+            "descriptor",
+            "redirect"
+          ],
+          "properties": {
+            "opcode": {
+              "type": "integer"
+            },
+            "access": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "descriptor": {
+              "type": "string"
+            },
+            "signature": {
+              "type": "string"
+            },
+            "redirect": {
+              "type": "object",
+              "required": [
+                "owner",
+                "name",
+                "descriptor",
+                "isInterface"
+              ],
+              "properties": {
+                "owner": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "descriptor": {
+                  "type": "string"
+                },
+                "isInterface": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "memberSet": {
+        "type": "array",
+        "uniqueItems": true,
+        "default": [],
+        "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "name",
+                "descriptor"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "descriptor": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+
+      },
+      "accessor": {
+        "type": "object",
+        "required": [
+          "access",
+          "type",
+          "name"
+        ],
+        "properties": {
+          "access": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "signature": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
