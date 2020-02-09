@@ -14,15 +14,13 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+public interface EntityAreaEffectCloudExtra {
 
-import java.util.Collection;
+    void refreshEffects();
 
-public class JsonListRedirects {
+    String getType();
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
-    }
+    void setType(String string);
 }

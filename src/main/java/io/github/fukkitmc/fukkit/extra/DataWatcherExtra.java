@@ -14,15 +14,17 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.DataWatcher;
+import net.minecraft.server.DataWatcherObject;
 
-import java.util.Collection;
+public interface DataWatcherExtra {
 
-public class JsonListRedirects {
+    default <T> void markDirty(DataWatcherObject<T> object) {
+        DataWatcher watcher = (DataWatcher) this;
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+        watcher.b(object).a(true);
+        watcher.g = true;
     }
 }

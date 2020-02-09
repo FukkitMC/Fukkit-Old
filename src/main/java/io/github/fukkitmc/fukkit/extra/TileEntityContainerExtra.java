@@ -14,15 +14,20 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.TileEntityContainer;
+import org.bukkit.Location;
 
-import java.util.Collection;
+public interface TileEntityContainerExtra {
 
-public class JsonListRedirects {
+    default Location getLocation() {
+        TileEntityContainer container = (TileEntityContainer) this;
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+        if (container.world == null) {
+            return null;
+        }
+
+        return new Location(container.world.getWorld(), container.position.getX(), container.position.getY(), container.position.getZ());
     }
 }

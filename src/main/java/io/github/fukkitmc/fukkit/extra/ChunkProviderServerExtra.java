@@ -14,15 +14,9 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+public interface ChunkProviderServerExtra {
 
-import java.util.Collection;
-
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
-    }
+    void purgeUnload();
 }

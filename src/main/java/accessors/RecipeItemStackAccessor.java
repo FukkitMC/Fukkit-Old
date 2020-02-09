@@ -14,15 +14,21 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package accessors;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.ItemStack;
+import net.minecraft.server.RecipeItemStack;
 
-import java.util.Collection;
+import java.util.stream.Stream;
 
-public class JsonListRedirects {
+public class RecipeItemStackAccessor {
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    public static Object createProvider(ItemStack itemStack) {
+        // TODO
+        return null;
+    }
+
+    public static RecipeItemStack create(Stream stream) {
+        return io.github.fukkitmc.fukkit.mixins.accessor.RecipeItemStackAccessor.create(stream);
     }
 }

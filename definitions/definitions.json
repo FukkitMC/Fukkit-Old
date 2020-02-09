@@ -1,5 +1,15 @@
 [
   {
+    "name": "net/minecraft/server/Advancement",
+    "syntheticFields": [
+      {
+        "name": "bukkit",
+        "type": "Lorg/bukkit/advancement/Advancement;",
+        "access": 1
+      }
+    ]
+  },
+  {
     "name": "net/minecraft/server/BiomeStorage",
     "publicizedFields": [
       {
@@ -9,19 +19,6 @@
       {
         "name": "g",
         "descriptor": "[Lnet/minecraft/server/BiomeBase;"
-      }
-    ],
-    "syntheticMethods": [
-      {
-        "opcode": 184,
-        "name": "setBiome",
-        "descriptor": "(IIILnet/minecraft/server/BiomeBase;)V",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/BiomeStorageRedirects",
-          "name": "setBiome",
-          "descriptor": "(Lnet/minecraft/server/BiomeStorage;IIILnet/minecraft/server/BiomeBase;)V"
-        }
       }
     ]
   },
@@ -48,61 +45,112 @@
         "type": "Lorg/bukkit/boss/KeyedBossBar;",
         "access": 1
       }
-    ],
-    "syntheticMethods": [
-      {
-        "opcode": 184,
-        "name": "getBukkitEntity",
-        "descriptor": "()Lorg/bukkit/boss/KeyedBossBar;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/BossBattleCustomRedirects",
-          "name": "getBukkitEntity",
-          "descriptor": "(Lnet/minecraft/server/BossBattleCustom;)Lorg/bukkit/boss/KeyedBossBar;"
-        }
-      }
     ]
   },
   {
-    "name": "net/minecraft/server/CommandListenerWrapper",
-    "syntheticMethods": [
+    "name": "net/minecraft/server/Chunk",
+    "syntheticFields": [
       {
-        "opcode": 184,
-        "name": "getBukkitSender",
-        "descriptor": "()Lorg/bukkit/command/CommandSender;",
+        "name": "bukkitChunk",
+        "type": "Lorg/bukkit/Chunk;",
         "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/CommandListenerWrapperRedirects",
-          "name": "getBukkitSender",
-          "descriptor": "(Lnet/minecraft/server/CommandListenerWrapper;)Lorg/bukkit/command/CommandSender;"
-        }
-      }
-    ]
-  },
-  {
-    "name": "net/minecraft/server/CraftingManager",
-    "syntheticMethods": [
-      {
-        "opcode": 184,
-        "name": "addRecipe",
-        "descriptor": "(Lnet/minecraft/server/IRecipe;)V",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/CraftingManagerRedirects",
-          "name": "addRecipe",
-          "descriptor": "(Lnet/minecraft/server/CraftingManager;Lnet/minecraft/server/IRecipe;)V"
+        "getter": {
+          "access": 1,
+          "type": "Lorg/bukkit/Chunk;",
+          "name": "getBukkitChunk"
         }
       },
       {
-        "opcode": 184,
-        "name": "clearRecipes",
-        "descriptor": "()V",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/CraftingManagerRedirects",
-          "name": "clearRecipes",
-          "descriptor": "(Lnet/minecraft/server/CraftingManager;)V"
-        }
+        "name": "mustNotSave",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "needsDecoration",
+        "type": "Z",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ChunkMapDistance",
+    "publicizedMethods": [
+      {
+        "name": "purgeTickets",
+        "descriptor": "()V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ChunkProviderServer",
+    "syntheticFields": [
+      {
+        "name": "save",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Ljava/lang/Boolean;>;",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/CommandDispatcher",
+    "syntheticFields": [
+      {
+        "name": "label",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Ljava/lang/String;>;",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Container",
+    "syntheticFields": [
+      {
+        "name": "checkReachable",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "title",
+        "type": "Lnet/minecraft/server/IChatBaseComponent;",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ContainerAnvil",
+    "syntheticFields": [
+      {
+        "name": "maximumRepairCost",
+        "type": "I",
+        "access": 1
+      },
+      {
+        "name": "lastLevelCost",
+        "type": "I",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ContainerLectern",
+    "syntheticFields": [
+      {
+        "name": "playerinventory",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Lnet/minecraft/server/PlayerInventory;>;",
+        "access": 9
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/DamageSource",
+    "syntheticFields": [
+      {
+        "name": "sweep",
+        "type": "Z",
+        "access": 1
       }
     ]
   },
@@ -119,27 +167,32 @@
         "name": "b",
         "descriptor": "(Lnet/minecraft/server/DataWatcherObject;)Lnet/minecraft/server/DataWatcher$Item;"
       }
-    ],
-    "syntheticMethods": [
+    ]
+  },
+  {
+    "name": "net/minecraft/server/DedicatedServerSettings",
+    "syntheticFields": [
       {
-        "opcode": 184,
-        "name": "markDirty",
-        "descriptor": "(Lnet/minecraft/server/DataWatcherObject;)V",
-        "signature": "<T:Ljava/lang/Object;>(Lnet/minecraft/server/DataWatcher;Lnet/minecraft/server/DataWatcherObject<TT;>;)V",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/DataWatcherRedirects",
-          "name": "markDirty",
-          "descriptor": "(Lnet/minecraft/server/DataWatcher;Lnet/minecraft/server/DataWatcherObject;)V"
-        }
+        "name": "optionset",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Ljoptsimple/OptionSet;>;",
+        "access": 9
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/DimensionManager",
+    "syntheticFields": [
+      {
+        "name": "type",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Lnet/minecraft/server/DimensionManager;>;",
+        "access": 9
       }
     ]
   },
   {
     "name": "net/minecraft/server/Entity",
-    "injectInterfaces": [
-      "io/github/fukkitmc/fukkit/things/EntityThing"
-    ],
     "syntheticFields": [
       {
         "name": "bukkitEntity",
@@ -147,33 +200,24 @@
         "access": 1
       },
       {
+        "name": "persist",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "valid",
+        "type": "Z",
+        "access": 1
+      },
+      {
         "name": "projectileSource",
         "type": "Lorg/bukkit/projectiles/ProjectileSource;",
         "access": 1
-      }
-    ],
-    "syntheticMethods": [
-      {
-        "opcode": 184,
-        "name": "getBukkitEntity",
-        "descriptor": "()Lorg/bukkit/craftbukkit/entity/CraftEntity;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/EntityRedirects",
-          "name": "getBukkitEntity",
-          "descriptor": "(Lnet/minecraft/server/Entity;)Lorg/bukkit/craftbukkit/entity/CraftEntity;"
-        }
       },
       {
-        "opcode": 184,
-        "name": "isChunkLoaded",
-        "descriptor": "()Z",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/EntityRedirects",
-          "name": "isChunkLoaded",
-          "descriptor": "(Lnet/minecraft/server/Entity;)Z"
-        }
+        "name": "forceExplosionKnockback",
+        "type": "Z",
+        "access": 1
       }
     ]
   },
@@ -188,56 +232,323 @@
     ]
   },
   {
-    "name": "net/minecraft/server/EntityHuman",
+    "name": "net/minecraft/server/EntityBoat",
+    "syntheticFields": [
+      {
+        "name": "maxSpeed",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "occupiedDeceleration",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "unoccupiedDeceleration",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "landBoats",
+        "type": "Z",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityFireball",
+    "syntheticFields": [
+      {
+        "name": "bukkitYield",
+        "type": "F",
+        "access": 1
+      },
+      {
+        "name": "isIncendiary",
+        "type": "Z",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityHanging",
     "syntheticMethods": [
       {
         "opcode": 184,
-        "name": "getBukkitEntity",
-        "descriptor": "()Lorg/bukkit/craftbukkit/entity/CraftHumanEntity;",
-        "access": 1,
+        "name": "calculateBoundingBox",
+        "descriptor": "(Lnet/minecraft/server/Entity;Lnet/minecraft/server/BlockPosition;Lnet/minecraft/server/EnumDirection;II)Lnet/minecraft/server/AxisAlignedBB;",
+        "access": 9,
         "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/EntityRedirects",
-          "name": "getHumanEntity",
-          "descriptor": "(Lnet/minecraft/server/EntityHuman;)Lorg/bukkit/craftbukkit/entity/CraftHumanEntity;"
+          "owner": "io/github/fukkitmc/fukkit/redirects/EntityHangingRedirects",
+          "name": "calculateBoundingBox",
+          "descriptor": "(Lnet/minecraft/server/Entity;Lnet/minecraft/server/BlockPosition;Lnet/minecraft/server/EnumDirection;II)Lnet/minecraft/server/AxisAlignedBB;"
         }
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityHorseAbstract",
+    "syntheticFields": [
+      {
+        "name": "maxDomestication",
+        "type": "I",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityHuman",
+    "syntheticFields": [
+      {
+        "name": "fauxSleeping",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "spawnWorld",
+        "type": "Ljava/lang/String;",
+        "access": 1
+      },
+      {
+        "name": "oldLevel",
+        "type": "I",
+        "access": 1
       }
     ]
   },
   {
     "name": "net/minecraft/server/EntityInsentient",
+    "publicizedFields": [
+      {
+        "name": "goalTarget",
+        "descriptor": "Lnet/minecraft/server/EntityLiving;"
+      }
+    ],
     "publicizedMethods": [
       {
         "name": "getDefaultLootTable",
         "descriptor": "()Lnet/minecraft/server/MinecraftKey;"
       }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityItemFrame",
+    "syntheticFields": [
+      {
+        "name": "playSound",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Ljava/lang/Boolean;>;",
+        "access": 1
+      }
     ],
     "syntheticMethods": [
       {
         "opcode": 184,
-        "name": "getLootTable",
-        "descriptor": "()Lnet/minecraft/server/MinecraftKey;",
-        "access": 1,
+        "name": "calculateBoundingBox",
+        "descriptor": "(Lnet/minecraft/server/Entity;Lnet/minecraft/server/BlockPosition;Lnet/minecraft/server/EnumDirection;II)Lnet/minecraft/server/AxisAlignedBB;",
+        "access": 9,
         "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/EntityInsentientRedirects",
-          "name": "getLootTable",
-          "descriptor": "(Lnet/minecraft/server/EntityInsentient;)Lnet/minecraft/server/MinecraftKey;"
+          "owner": "io/github/fukkitmc/fukkit/redirects/EntityItemFrameRedirects",
+          "name": "calculateBoundingBox",
+          "descriptor": "(Lnet/minecraft/server/Entity;Lnet/minecraft/server/BlockPosition;Lnet/minecraft/server/EnumDirection;II)Lnet/minecraft/server/AxisAlignedBB;"
         }
       }
     ]
   },
   {
-    "name": "net/minecraft/server/EntityPlayer",
-    "syntheticMethods": [
+    "name": "net/minecraft/server/EntityLightning",
+    "syntheticFields": [
       {
-        "opcode": 184,
-        "name": "getBukkitEntity",
-        "descriptor": "()Lorg/bukkit/craftbukkit/entity/CraftPlayer;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/EntityRedirects",
-          "name": "getPlayerEntity",
-          "descriptor": "(Lnet/minecraft/server/EntityPlayer;)Lorg/bukkit/craftbukkit/entity/CraftPlayer;"
-        }
+        "name": "isEffect",
+        "type": "Z",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityLiving",
+    "syntheticFields": [
+      {
+        "name": "expToDrop",
+        "type": "I",
+        "access": 1
+      },
+      {
+        "name": "maxAirTicks",
+        "type": "I",
+        "access": 1
+      },
+      {
+        "name": "forceDrops",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "drops",
+        "type": "Ljava/util/ArrayList;",
+        "signature": "Ljava/util/ArrayList<Lorg/bukkit/inventory/ItemStack;>;",
+        "access": 1
+      },
+      {
+        "name": "craftAttributes",
+        "type": "Lorg/bukkit/craftbukkit/attribute/CraftAttributeMap;",
+        "access": 1
+      },
+      {
+        "name": "collides",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "canPickUpLoot",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "isTickingEffects",
+        "type": "Z",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityLlamaSpit",
+    "syntheticFields": [
+      {
+        "name": "shoooter",
+        "type": "Lnet/minecraft/server/EntityLiving;",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityMinecartAbstract",
+    "syntheticFields": [
+      {
+        "name": "slowWhenEmpty",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "derailedX",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "derailedY",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "derailedZ",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "flyingX",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "flyingY",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "flyingZ",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "maxSpeed",
+        "type": "D",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityPlayer",
+    "syntheticFields": [
+      {
+        "name": "displayName",
+        "type": "Ljava/lang/String;",
+        "access": 1
+      },
+      {
+        "name": "listName",
+        "type": "Lnet/minecraft/server/IChatBaseComponent;",
+        "access": 1
+      },
+      {
+        "name": "compassTarget",
+        "type": "Lorg/bukkit/Location;",
+        "access": 1
+      },
+      {
+        "name": "newExp",
+        "type": "I",
+        "access": 1
+      },
+      {
+        "name": "newLevel",
+        "type": "I",
+        "access": 1
+      },
+      {
+        "name": "newTotalExp",
+        "type": "I",
+        "access": 1
+      },
+      {
+        "name": "keepLevel",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "maxHealthCache",
+        "type": "D",
+        "access": 1
+      },
+      {
+        "name": "joining",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "sentListPacket",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "clientViewDistance",
+        "type": "Ljava/lang/Integer;",
+        "access": 1
+      },
+      {
+        "name": "timeOffset",
+        "type": "I",
+        "access": 1
+      },
+      {
+        "name": "relativeTime",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "weather",
+        "type": "Lorg/bukkit/WeatherType;",
+        "access": 1
+      },
+      {
+        "name": "pluginRainPosition",
+        "type": "F",
+        "access": 1
+      },
+      {
+        "name": "pluginRainPositionPrevious",
+        "type": "F",
+        "access": 1
       }
     ]
   },
@@ -254,6 +565,17 @@
           "name": "f",
           "descriptor": "()Lnet/minecraft/server/ItemStack;"
         }
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/ArgumentEntity",
+    "syntheticFields": [
+      {
+        "name": "overridePermissions",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Ljava/lang/Boolean;>;",
+        "access": 1
       }
     ]
   },
@@ -278,51 +600,20 @@
         "name": "a",
         "descriptor": "(Lnet/minecraft/server/EnumDirection$EnumAxis;)V"
       }
-    ],
-    "syntheticMethods": [
+    ]
+  },
+  {
+    "name": "net/minecraft/server/EntityTNTPrimed",
+    "syntheticFields": [
       {
-        "opcode": 184,
-        "name": "getShooter",
-        "descriptor": "()Lnet/minecraft/server/EntityLiving;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/EntityShulkerBulletRedirects",
-          "name": "getShooter",
-          "descriptor": "(Lnet/minecraft/server/EntityShulkerBullet;)Lnet/minecraft/server/EntityLiving;"
-        }
+        "name": "yield",
+        "type": "F",
+        "access": 1
       },
       {
-        "opcode": 184,
-        "name": "setShooter",
-        "descriptor": "(Lnet/minecraft/server/EntityLiving;)V",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/EntityShulkerBulletRedirects",
-          "name": "setShooter",
-          "descriptor": "(Lnet/minecraft/server/EntityShulkerBullet;Lnet/minecraft/server/EntityLiving;)V"
-        }
-      },
-      {
-        "opcode": 184,
-        "name": "getTarget",
-        "descriptor": "()Lnet/minecraft/server/Entity;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/EntityShulkerBulletRedirects",
-          "name": "getTarget",
-          "descriptor": "(Lnet/minecraft/server/EntityShulkerBullet;)Lnet/minecraft/server/Entity;"
-        }
-      },
-      {
-        "opcode": 184,
-        "name": "setTarget",
-        "descriptor": "(Lnet/minecraft/server/Entity;)V",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/EntityShulkerBulletRedirects",
-          "name": "setTarget",
-          "descriptor": "(Lnet/minecraft/server/EntityShulkerBullet;Lnet/minecraft/server/Entity;)V"
-        }
+        "name": "isIncendiary",
+        "type": "Z",
+        "access": 1
       }
     ]
   },
@@ -333,41 +624,35 @@
         "name": "b",
         "descriptor": "Ljava/util/Date;"
       }
-    ],
-    "syntheticMethods": [
+    ]
+  },
+  {
+    "name": "net/minecraft/server/Explosion",
+    "syntheticFields": [
       {
-        "opcode": 184,
-        "name": "getCreated",
-        "descriptor": "()Ljava/util/Date;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/ExpirableListEntryRedirects",
-          "name": "getCreated",
-          "descriptor": "(Lnet/minecraft/server/ExpirableListEntry;)Ljava/util/Date;"
-        }
+        "name": "wasCanceled",
+        "type": "Z",
+        "access": 1
       }
     ]
   },
   {
-    "name": "net/minecraft/server/IBlockAccess",
+    "name": "net/minecraft/server/IBlockAccess"
+  },
+  {
+    "name": "net/minecraft/server/ItemBlock",
     "syntheticMethods": [
       {
         "opcode": 184,
-        "name": "rayTraceBlock",
-        "descriptor": "(Lnet/minecraft/server/RayTrace;Lnet/minecraft/server/BlockPosition;)Lnet/minecraft/server/MovingObjectPositionBlock;",
-        "access": 1,
+        "name": "getBlockState",
+        "descriptor": "(Lnet/minecraft/server/IBlockData;Lnet/minecraft/server/NBTTagCompound;)Lnet/minecraft/server/IBlockData;",
+        "access": 9,
         "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/IBlockAccessRedirects",
-          "name": "rayTraceBlock",
-          "descriptor": "(Lnet/minecraft/server/IBlockAccess;Lnet/minecraft/server/RayTrace;Lnet/minecraft/server/BlockPosition;)Lnet/minecraft/server/MovingObjectPositionBlock;"
+          "owner": "io/github/fukkitmc/fukkit/redirects/ItemBlockRedirects",
+          "name": "getBlockState",
+          "descriptor": "(Lnet/minecraft/server/IBlockData;Lnet/minecraft/server/NBTTagCompound;)Lnet/minecraft/server/IBlockData;"
         }
       }
-    ]
-  },
-  {
-    "name": "net/minecraft/server/ICommandListener",
-    "injectInterfaces": [
-      "io/github/fukkitmc/fukkit/things/ICommandListenerThing"
     ]
   },
   {
@@ -390,6 +675,38 @@
           "name": "getValues",
           "descriptor": "(Lnet/minecraft/server/JsonList;)Ljava/util/Collection;"
         }
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/MapIcon",
+    "syntheticMethods": [
+      {
+        "access": 1,
+        "opcode": 182,
+        "name": "getTheType",
+        "descriptor": "()Lnet/minecraft/server/MapIcon$Type;",
+        "redirect": {
+          "owner": "net/minecraft/server/MapIcon",
+          "name": "getType",
+          "descriptor": "()Lnet/minecraft/server/MapIcon$Type;"
+        }
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/MerchantRecipe",
+    "syntheticFields": [
+      {
+        "name": "bukkit",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Lorg/bukkit/craftbukkit/inventory/CraftMerchantRecipe;>;",
+        "access": 9
+      },
+      {
+        "name": "bukkitHandle",
+        "type": "Lorg/bukkit/craftbukkit/inventory/CraftMerchantRecipe;",
+        "access": 1
       }
     ]
   },
@@ -422,10 +739,45 @@
         "access": 1
       },
       {
+        "name": "currentTick",
+        "type": "I",
+        "access": 9
+      },
+      {
         "name": "processQueue",
         "type": "Ljava/util/Queue;",
         "signature": "Ljava/util/Queue<Ljava/lang/Runnable;>;",
         "access": 1
+      },
+      {
+        "name": "autosavePeriod",
+        "type": "I",
+        "access": 1
+      },
+      {
+        "name": "bukkitDataPackFolder",
+        "type": "Ljava/io/File;",
+        "access": 1
+      },
+      {
+        "name": "vanillaCommandDispatcher",
+        "type": "Lnet/minecraft/server/CommandDispatcher;",
+        "access": 1
+      },
+      {
+        "name": "forceTicks",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "worldserver",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Lnet/minecraft/server/WorldServer;>;",
+        "access": 1
+      },
+      {
+        "name": "hasStopped",
+        "type": "Z"
       }
     ],
     "syntheticMethods": [
@@ -443,25 +795,41 @@
     ]
   },
   {
+    "name": "net/minecraft/server/PlayerChunkMap",
+    "publicizedMethods": [
+      {
+        "name": "unloadChunks",
+        "descriptor": "(Ljava/util/function/BooleanSupplier;)V"
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/PropertyManager",
+    "syntheticFields": [
+      {
+        "name": "optionset",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Ljoptsimple/OptionSet;>;",
+        "access": 9
+      }
+    ]
+  },
+  {
     "name": "net/minecraft/server/Raid",
     "publicizedFields": [
       {
         "name": "raiders",
         "descriptor": "Ljava/util/Map;"
       }
-    ],
-    "syntheticMethods": [
+    ]
+  },
+  {
+    "name": "net/minecraft/server/RecipeItemStack",
+    "syntheticFields": [
       {
-        "opcode": 184,
-        "name": "getRaiders",
-        "descriptor": "()Ljava/util/List;",
-        "signature": "()Ljava/util/List<Lnet/minecraft/server/EntityRaider;>;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/RaidRedirects",
-          "name": "getRaiders",
-          "descriptor": "(Lnet/minecraft/server/Raid;)Ljava/util/List;"
-        }
+        "name": "exact",
+        "type": "Z",
+        "access": 1
       }
     ]
   },
@@ -476,6 +844,23 @@
     ]
   },
   {
+    "name": "net/minecraft/server/TicketType",
+    "syntheticFields": [
+      {
+        "name": "PLUGIN",
+        "type": "Lnet/minecraft/server/TicketType;",
+        "signature": "Lnet/minecraft/server/TicketType<Lnet/minecraft/server/Unit;>;",
+        "access": 9
+      },
+      {
+        "name": "PLUGIN_TICKET",
+        "type": "Lnet/minecraft/server/TicketType;",
+        "signature": "Lnet/minecraft/server/TicketType<Lorg/bukkit/plugin/Plugin;>;",
+        "access": 9
+      }
+    ]
+  },
+  {
     "name": "net/minecraft/server/TileEntity",
     "syntheticFields": [
       {
@@ -486,47 +871,30 @@
     ]
   },
   {
-    "name": "net/minecraft/server/TileEntityBeacon",
-    "syntheticMethods": [
+    "name": "net/minecraft/server/TileEntityBeehive",
+    "syntheticFields": [
       {
-        "opcode": 184,
-        "name": "getPrimaryEffect",
-        "descriptor": "()Lorg/bukkit/potion/PotionEffect;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/TileEntityBeaconRedirects",
-          "name": "getPrimaryEffect",
-          "descriptor": "(Lnet/minecraft/server/TileEntityBeacon;)Lorg/bukkit/potion/PotionEffect;"
-        }
-      },
-      {
-        "opcode": 184,
-        "name": "getSecondaryEffect",
-        "descriptor": "()Lorg/bukkit/potion/PotionEffect;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/TileEntityBeaconRedirects",
-          "name": "getSecondaryEffect",
-          "descriptor": "(Lnet/minecraft/server/TileEntityBeacon;)Lorg/bukkit/potion/PotionEffect;"
-        }
-      },
-      {
-        "opcode": 184,
-        "name": "getHumansInRange",
-        "descriptor": "()Ljava/util/List;",
-        "signature": "()Ljava/util/List<Lnet/minecraft/server/EntityHuman;>;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/TileEntityBeaconRedirects",
-          "name": "getHumansInRange",
-          "descriptor": "(Lnet/minecraft/server/TileEntityBeacon;)Ljava/util/List;"
-        }
+        "name": "maxBees",
+        "type": "I",
+        "access": 1
       }
     ]
   },
   {
     "name": "net/minecraft/server/World",
     "syntheticFields": [
+      {
+        "name": "env",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Lorg/bukkit/World$Environment;>;",
+        "access": 9
+      },
+      {
+        "name": "gen",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Lorg/bukkit/generator/ChunkGenerator;>;",
+        "access": 9
+      },
       {
         "name": "world",
         "type": "Lorg/bukkit/craftbukkit/CraftWorld;",
@@ -536,19 +904,76 @@
           "type": "Lorg/bukkit/craftbukkit/CraftWorld;",
           "name": "getWorld"
         }
-      }
-    ],
-    "syntheticMethods": [
+      },
       {
-        "opcode": 184,
-        "name": "getServer",
-        "descriptor": "()Lorg/bukkit/craftbukkit/CraftServer;",
-        "access": 1,
-        "redirect": {
-          "owner": "org/bukkit/Bukkit",
-          "name": "getServer",
-          "descriptor": "()Lorg/bukkit/Server;"
-        }
+        "name": "pvpMode",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "keepSpawnInMemory",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "generator",
+        "type": "Lorg/bukkit/generator/ChunkGenerator;",
+        "access": 1
+      },
+      {
+        "name": "captureBlockStates",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "captureTreeGeneration",
+        "type": "Z",
+        "access": 1
+      },
+      {
+        "name": "capturedBlockStates",
+        "type": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Lnet/minecraft/server/BlockPosition;Lorg/bukkit/craftbukkit/block/CapturedBlockState;>;"
+      },
+      {
+        "name": "capturedTileEntities",
+        "type": "Ljava/util/Map;",
+        "signature": "Ljava/util/Map<Lnet/minecraft/server/BlockPosition;Lnet/minecraft/server/TileEntity;>;"
+      },
+      {
+        "name": "ticksPerAnimalSpawns",
+        "type": "J",
+        "access": 1
+      },
+      {
+        "name": "ticksPerMonsterSpawns",
+        "type": "J",
+        "access": 1
+      },
+      {
+        "name": "populating",
+        "type": "Z",
+        "access": 1
+      }
+    ]
+  },
+  {
+    "name": "net/minecraft/server/WorldMap",
+    "syntheticFields": [
+      {
+        "name": "mapView",
+        "type": "Lorg/bukkit/craftbukkit/map/CraftMapView;",
+        "access": 1
+      },
+      {
+        "name": "server",
+        "type": "Lorg/bukkit/craftbukkit/CraftServer;",
+        "access": 1
+      },
+      {
+        "name": "uniqueId",
+        "type": "Ljava/util/UUID;",
+        "access": 1
       }
     ]
   },
@@ -574,40 +999,22 @@
         "type": "Ljava/util/UUID;",
         "access": 1
       }
-    ],
-    "syntheticMethods": [
+    ]
+  },
+  {
+    "name": "net/minecraft/server/WorldServer",
+    "syntheticFields": [
       {
-        "opcode": 184,
-        "name": "getPlayerData",
-        "descriptor": "(Ljava/lang/String;)Lnet/minecraft/server/NBTTagCompound;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/WorldNBTStorageRedirects",
-          "name": "getPlayerData",
-          "descriptor": "(Lnet/minecraft/server/WorldNBTStorage;Ljava/lang/String;)Lnet/minecraft/server/NBTTagCompound;"
-        }
+        "name": "sender",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Lnet/minecraft/server/EntityPlayer;>;",
+        "access": 1
       },
       {
-        "opcode": 184,
-        "name": "getUUID",
-        "descriptor": "()Ljava/util/UUID;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/WorldNBTStorageRedirects",
-          "name": "getUUID",
-          "descriptor": "(Lnet/minecraft/server/WorldNBTStorage;)Ljava/util/UUID;"
-        }
-      },
-      {
-        "opcode": 184,
-        "name": "getPlayerDir",
-        "descriptor": "()Ljava/io/File;",
-        "access": 1,
-        "redirect": {
-          "owner": "io/github/fukkitmc/fukkit/redirects/WorldNBTStorageRedirects",
-          "name": "getPlayerDir",
-          "descriptor": "(Lnet/minecraft/server/WorldNBTStorage;)Ljava/io/File;"
-        }
+        "name": "force",
+        "type": "Ljava/lang/ThreadLocal;",
+        "signature": "Ljava/lang/ThreadLocal<Ljava/lang/Boolean;>;",
+        "access": 1
       }
     ]
   }

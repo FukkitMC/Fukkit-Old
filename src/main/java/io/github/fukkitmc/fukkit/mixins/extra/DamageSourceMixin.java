@@ -14,15 +14,12 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.mixins.extra;
 
-import net.minecraft.server.JsonList;
+import io.github.fukkitmc.fukkit.extra.DamageSourceExtra;
+import net.minecraft.server.DamageSource;
+import org.spongepowered.asm.mixin.Mixin;
 
-import java.util.Collection;
-
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
-    }
+@Mixin(DamageSource.class)
+public class DamageSourceMixin implements DamageSourceExtra {
 }

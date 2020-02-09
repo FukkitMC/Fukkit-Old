@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "package": "io.github.fukkitmc.fukkit.mixins.inventory",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ContainerAnvilMixin",
+    "ContainerBeaconMixin",
+    "ContainerMixin",
+    "EntityMinecartContainerMixin",
+    "EntitySheep$1Mixin",
+    "InventoryCraftingMixin",
+    "InventoryCraftResultMixin",
+    "InventoryLargeChestMixin",
+    "InventoryMerchantMixin",
+    "InventorySubcontainerMixin",
+    "PlayerInventoryMixin",
+    "TileEntityBrewingStandMixin",
+    "TileEntityFurnaceMixin",
+    "TileEntityLectern$LecternInventoryMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

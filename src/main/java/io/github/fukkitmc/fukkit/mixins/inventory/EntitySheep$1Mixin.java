@@ -14,15 +14,17 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.mixins.inventory;
 
-import net.minecraft.server.JsonList;
+import io.github.fukkitmc.fukkit.extra.ContainerExtra;
+import org.bukkit.inventory.InventoryView;
+import org.spongepowered.asm.mixin.Mixin;
 
-import java.util.Collection;
+@Mixin(targets = "net/minecraft/server/EntitySheep$1")
+public class EntitySheep$1Mixin implements ContainerExtra {
 
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    @Override
+    public InventoryView getBukkitView() {
+        return null;
     }
 }

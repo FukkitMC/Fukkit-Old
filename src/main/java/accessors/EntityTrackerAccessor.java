@@ -14,15 +14,17 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package accessors;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.EntityPlayer;
 
-import java.util.Collection;
+import java.util.Set;
 
-public class JsonListRedirects {
+public interface EntityTrackerAccessor {
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
-    }
+    Set<EntityPlayer> getTrackedPlayers();
+
+    void updatePlayer(EntityPlayer entityplayer);
+
+    void clear(EntityPlayer entityplayer);
 }

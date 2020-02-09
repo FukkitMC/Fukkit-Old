@@ -14,15 +14,24 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.EntityRaider;
+import net.minecraft.server.Raid;
 
-import java.util.Collection;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
-public class JsonListRedirects {
+public interface RaidExtra {
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    default List<EntityRaider> getRaiders() {
+        List<EntityRaider> raiders = new ArrayList<>();
+
+        for (Set<EntityRaider> r : ((Raid) this).raiders.values()) {
+            raiders.addAll(r);
+        }
+
+        return raiders;
     }
 }

@@ -14,15 +14,17 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.Entity;
+import net.minecraft.server.IBlockData;
+import net.minecraft.server.TileEntityBeehive;
 
-import java.util.Collection;
+import java.util.List;
 
-public class JsonListRedirects {
+public interface TileEntityBeehiveExtra {
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    default List<Entity> releaseBees(IBlockData data, TileEntityBeehive.ReleaseStatus releaseStatus, boolean force) {
+        throw new UnsupportedOperationException();
     }
 }

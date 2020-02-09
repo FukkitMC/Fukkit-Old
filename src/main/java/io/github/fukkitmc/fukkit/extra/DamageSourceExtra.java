@@ -14,15 +14,19 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.DamageSource;
 
-import java.util.Collection;
+public interface DamageSourceExtra {
 
-public class JsonListRedirects {
+    default boolean isSweep() {
+        return ((DamageSource) this).sweep;
+    }
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    default DamageSource sweep() {
+        DamageSource source = (DamageSource) this;
+        source.sweep = true;
+        return source;
     }
 }

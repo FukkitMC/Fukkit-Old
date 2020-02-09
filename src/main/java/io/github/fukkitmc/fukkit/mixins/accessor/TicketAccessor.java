@@ -14,15 +14,18 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.mixins.accessor;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.Ticket;
+import net.minecraft.server.TicketType;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Invoker;
 
-import java.util.Collection;
+@Mixin(Ticket.class)
+public interface TicketAccessor {
 
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    @Invoker("<init>")
+    static <T> Ticket<T> create(TicketType<T> type, int i, T t) {
+        throw new AssertionError("Mixin was not applied");
     }
 }

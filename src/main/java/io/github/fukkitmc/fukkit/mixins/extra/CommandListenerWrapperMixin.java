@@ -14,15 +14,12 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.mixins.extra;
 
-import net.minecraft.server.JsonList;
+import io.github.fukkitmc.fukkit.extra.CommandListenerWrapperExtra;
+import net.minecraft.server.CommandListenerWrapper;
+import org.spongepowered.asm.mixin.Mixin;
 
-import java.util.Collection;
-
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
-    }
+@Mixin(CommandListenerWrapper.class)
+public class CommandListenerWrapperMixin implements CommandListenerWrapperExtra {
 }

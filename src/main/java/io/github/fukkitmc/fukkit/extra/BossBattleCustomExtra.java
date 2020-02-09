@@ -14,15 +14,21 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.BossBattleCustom;
+import org.bukkit.boss.KeyedBossBar;
+import org.bukkit.craftbukkit.boss.CraftKeyedBossbar;
 
-import java.util.Collection;
+public interface BossBattleCustomExtra {
 
-public class JsonListRedirects {
+    default KeyedBossBar getBukkitEntity() {
+        BossBattleCustom battle = (BossBattleCustom) this;
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+        if (battle.bossBar == null) {
+            battle.bossBar = new CraftKeyedBossbar(battle);
+        }
+
+        return battle.bossBar;
     }
 }

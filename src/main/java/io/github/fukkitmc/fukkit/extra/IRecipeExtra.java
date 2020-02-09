@@ -14,15 +14,11 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import org.bukkit.inventory.Recipe;
 
-import java.util.Collection;
+public interface IRecipeExtra {
 
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
-    }
+    Recipe toBukkitRecipe();
 }

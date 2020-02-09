@@ -14,15 +14,9 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package accessors;
 
-import net.minecraft.server.JsonList;
+public interface ItemCooldownInfoAccessor {
 
-import java.util.Collection;
-
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
-    }
+    int getEndTick();
 }

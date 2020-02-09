@@ -14,15 +14,21 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.BiomeBase;
+import net.minecraft.server.BiomeStorage;
+import net.minecraft.server.MathHelper;
 
-import java.util.Collection;
+public interface BiomeStorageExtra {
 
-public class JsonListRedirects {
+    default void setBiome(int i, int j, int k, BiomeBase biome) {
+        BiomeStorage storage = (BiomeStorage) this;
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+        int l = i & BiomeStorage.b;
+        int i1 = MathHelper.clamp(j, 0, BiomeStorage.c);
+        int j1 = k & BiomeStorage.b;
+
+        storage.g[i1 << BiomeStorage.e + BiomeStorage.e | j1 << BiomeStorage.e | l] = biome;
     }
 }

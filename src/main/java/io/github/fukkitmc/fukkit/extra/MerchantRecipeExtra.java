@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.MerchantRecipe;
+import org.bukkit.craftbukkit.inventory.CraftMerchantRecipe;
 
-import java.util.Collection;
+public interface MerchantRecipeExtra {
 
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    default CraftMerchantRecipe asBukkit() {
+        MerchantRecipe recipe = (MerchantRecipe) this;
+        return (recipe.bukkitHandle == null) ? recipe.bukkitHandle = new CraftMerchantRecipe(recipe) : recipe.bukkitHandle;
     }
 }

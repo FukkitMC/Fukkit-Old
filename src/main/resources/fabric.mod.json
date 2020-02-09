@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "fukkit",
+  "version": "1.0.0+1.15.2-2420d8b3af1099bfe3728bbd45f06c193453ce37",
+  "environment": "SERVER",
+  "mixins": [
+    "mixins.fukkit-accessor.json",
+    "mixins.fukkit-general.json",
+    "mixins.fukkit-extra.json",
+    "mixins.fukkit-inventory.json",
+    "mixins.fukkit-recipe.json"
+  ]
+}

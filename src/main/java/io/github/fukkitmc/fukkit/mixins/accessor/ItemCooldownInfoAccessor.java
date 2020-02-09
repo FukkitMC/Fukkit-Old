@@ -14,15 +14,21 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.mixins.accessor;
 
-import net.minecraft.server.JsonList;
+import org.spongepowered.asm.mixin.Final;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 
-import java.util.Collection;
+@Mixin(targets = "net/minecraft/server/ItemCooldown$Info")
+public class ItemCooldownInfoAccessor implements accessors.ItemCooldownInfoAccessor {
 
-public class JsonListRedirects {
+    @Shadow
+    @Final
+    public int endTick;
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    @Override
+    public int getEndTick() {
+        return endTick;
     }
 }

@@ -14,15 +14,18 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.mixins.recipe;
 
-import net.minecraft.server.JsonList;
+import io.github.fukkitmc.fukkit.extra.IRecipeExtra;
+import net.minecraft.server.IRecipeComplex;
+import org.bukkit.inventory.Recipe;
+import org.spongepowered.asm.mixin.Mixin;
 
-import java.util.Collection;
+@Mixin(IRecipeComplex.class)
+public class IRecipeComplexMixin implements IRecipeExtra {
 
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    @Override
+    public Recipe toBukkitRecipe() {
+        return new org.bukkit.craftbukkit.inventory.CraftComplexRecipe((IRecipeComplex) (Object) this);
     }
 }

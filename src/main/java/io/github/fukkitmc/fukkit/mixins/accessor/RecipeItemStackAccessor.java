@@ -14,15 +14,19 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.mixins.accessor;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.RecipeItemStack;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.gen.Invoker;
 
-import java.util.Collection;
+import java.util.stream.Stream;
 
-public class JsonListRedirects {
+@Mixin(value = RecipeItemStack.class)
+public interface RecipeItemStackAccessor {
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    @Invoker("<init>")
+    static RecipeItemStack create(Stream items) {
+        throw new AssertionError("Mixin was not applied");
     }
 }

@@ -16,13 +16,12 @@
 
 package io.github.fukkitmc.fukkit.redirects;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.IBlockData;
+import net.minecraft.server.NBTTagCompound;
 
-import java.util.Collection;
+public class ItemBlockRedirects {
 
-public class JsonListRedirects {
-
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    public static IBlockData getBlockState(IBlockData iblockdata, NBTTagCompound nbttagcompound1) {
+        throw new UnsupportedOperationException();
     }
 }

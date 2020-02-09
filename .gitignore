@@ -1,4 +1,4 @@
 .gradle/
 build/
-patches/
-src/main/java/org
+src/main/java/org/
+run/

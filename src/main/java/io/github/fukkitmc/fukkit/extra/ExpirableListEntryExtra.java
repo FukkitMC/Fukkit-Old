@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.ExpirableListEntry;
 
-import java.util.Collection;
+import java.util.Date;
 
-public class JsonListRedirects {
+public interface ExpirableListEntryExtra {
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    default Date getCreated() {
+        return ((ExpirableListEntry<?>) this).b;
     }
 }

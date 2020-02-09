@@ -14,15 +14,22 @@
  * limitations under the License.
  */
 
-package io.github.fukkitmc.fukkit.redirects;
+package io.github.fukkitmc.fukkit.extra;
 
-import net.minecraft.server.JsonList;
+import net.minecraft.server.BlockPosition;
+import net.minecraft.server.World;
 
-import java.util.Collection;
+public interface ContainerAccessExtra {
 
-public class JsonListRedirects {
+    default World getWorld() {
+        throw new UnsupportedOperationException();
+    }
 
-    public static Collection getValues(JsonList list) {
-        return list.d.values();
+    default BlockPosition getPosition() {
+        throw new UnsupportedOperationException();
+    }
+
+    default org.bukkit.Location getLocation() {
+        return new org.bukkit.Location(getWorld().getWorld(), getPosition().getX(), getPosition().getY(), getPosition().getZ());
     }
 }
